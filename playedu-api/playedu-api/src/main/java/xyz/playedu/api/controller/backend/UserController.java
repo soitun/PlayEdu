@@ -262,6 +262,7 @@ public class UserController {
         return JsonResponse.success();
     }
 
+    @BackendPermission(slug = BPermissionConstant.USER_STORE)
     @PostMapping("/store-batch")
     @Transactional
     @Log(title = "学员-批量导入", businessType = BusinessTypeConstant.INSERT)

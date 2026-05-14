@@ -141,6 +141,7 @@ public class CourseAttachmentController {
         return JsonResponse.success();
     }
 
+    @BackendPermission(slug = BPermissionConstant.COURSE)
     @PutMapping("/update/sort")
     @Log(title = "线上课-附件-排序调整", businessType = BusinessTypeConstant.UPDATE)
     public JsonResponse updateSort(

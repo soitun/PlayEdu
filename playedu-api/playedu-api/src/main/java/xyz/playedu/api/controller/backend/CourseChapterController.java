@@ -95,6 +95,7 @@ public class CourseChapterController {
         return JsonResponse.success();
     }
 
+    @BackendPermission(slug = BPermissionConstant.COURSE)
     @PutMapping("/update/sort")
     @Log(title = "线上课-章节-更新排序", businessType = BusinessTypeConstant.UPDATE)
     public JsonResponse updateSort(

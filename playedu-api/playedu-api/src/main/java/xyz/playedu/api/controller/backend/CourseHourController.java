@@ -224,6 +224,7 @@ public class CourseHourController {
         return JsonResponse.success();
     }
 
+    @BackendPermission(slug = BPermissionConstant.COURSE)
     @PutMapping("/update/sort")
     @Log(title = "线上课-课时-更新排序", businessType = BusinessTypeConstant.UPDATE)
     public JsonResponse updateSort(
